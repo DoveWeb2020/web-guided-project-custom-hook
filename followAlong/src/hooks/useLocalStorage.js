@@ -8,7 +8,7 @@ export const useLocalStorage = (key, initialValue) => {
 
   // First, check localStorage. (Did the user already start this form?)
   // If the value is already in localStorage, use it to initialize the useState call
-  const [value, setValue] = useState(() => {
+  const [value, setStateValue] = useState(() => {
     if (localStorage.getItem(key)) {
       return JSON.parse(localStorage.getItem(key))
     }
@@ -18,7 +18,14 @@ export const useLocalStorage = (key, initialValue) => {
     }
   });
 
+    // When setValue is called, in addition to the normal useState behavior, also persist the new value to localStorage.
+  const setValue = (newValue) => {
+    setStateValue(newValue);
 
-  // When setValue is called, in addition to the normal useState behavior, also persist the new value to localStorage.
+  }
+
+
+
+
   return [value, setValue];
 }
