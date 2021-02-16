@@ -2,12 +2,7 @@ import { useState } from "react";
 // The utility that useState provides for a single state variable,
 // this custom hook provides for an entire form, with some bonus functions :)
 
-const initialValues = {
-  firstName: "",
-  lastName: ""
-}
-
-export const useForm = () => {
+export const useForm = (initialValues) => {
   const [values, setValues] = useState(initialValues);
 
   const handleChanges = e => {
