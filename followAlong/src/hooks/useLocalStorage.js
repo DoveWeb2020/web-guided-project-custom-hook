@@ -11,6 +11,6 @@ export const useLocalStorage = (initialValue) => {
   const [value, setValue] = useState(initialValue);
 
 
-
+  // When setValue is called, in addition to the normal useState behavior, also persist the new value to localStorage.
   return [value, setValue];
 }
