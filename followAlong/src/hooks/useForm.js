@@ -6,8 +6,12 @@ export const useForm = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
-  const handleChanges = e => {
+  const handleFirstNameChanges = e => {
     setFirstName(e.target.value);
+  };
+
+  const handleLastNameChanges = e => {
+    setLastName(e.target.value);
   };
 
   const clearForm = e => {
@@ -16,5 +20,5 @@ export const useForm = () => {
   };
 
   // return value should be something *kinda* like [firstName, setFirstName]
-  return [firstName, handleChanges, clearForm];
+  return [firstName, lastName, handleChanges, clearForm];
 }
