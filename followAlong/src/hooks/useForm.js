@@ -8,7 +8,7 @@ const initialValues = {
 }
 
 export const useForm = () => {
-  const [values, setValues] = useState();
+  const [values, setValues] = useState(initialValues);
 
   const handleChanges = e => {
     console.log("change event", e.target);
