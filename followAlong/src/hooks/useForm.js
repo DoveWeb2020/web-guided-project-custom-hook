@@ -10,13 +10,7 @@ const initialValues = {
 export const useForm = () => {
   const [values, setValues] = useState();
 
-  // if firstName edited, call this one
-  const handleFirstNameChanges = e => {
-    setFirstName(e.target.value);
-  };
-
-  // if lastName edited, call this one
-  const handleLastNameChanges = e => {
+  const handleChanges = e => {
     setLastName(e.target.value);
   };
 
