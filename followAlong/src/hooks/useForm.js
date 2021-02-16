@@ -11,7 +11,7 @@ export const useForm = () => {
   const [values, setValues] = useState();
 
   const handleChanges = e => {
-    setLastName(e.target.value);
+    setValues([e.target.name]: e.target.value);
   };
 
   const clearForm = e => {
