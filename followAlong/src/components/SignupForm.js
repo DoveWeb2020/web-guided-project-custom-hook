@@ -48,10 +48,10 @@ export default function SignupForm() {
           />
           <TextField
             id="outlined-name"
-            label="First Name"
+            label="Last Name"
             className={classes.textField}
-            name="firstName"
-            value={firstName}
+            name="lastName"
+            value={lastName}
             onChange={handleChanges}
             margin="normal"
             variant="outlined"
