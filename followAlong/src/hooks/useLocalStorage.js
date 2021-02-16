@@ -13,7 +13,7 @@ export const useLocalStorage = (key, initialValue) => {
       return JSON.parse(localStorage.getItem(key))
     }
     else {
-      localStorage.setItem(JSON.stringify(initialValue));
+      localStorage.setItem(key, JSON.stringify(initialValue));
       return initialValue;
     }
   });
