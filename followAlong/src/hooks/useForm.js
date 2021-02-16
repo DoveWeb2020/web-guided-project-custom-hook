@@ -12,7 +12,10 @@ export const useForm = () => {
 
   const handleChanges = e => {
     console.log("change event", e.target);
-    setValues({ ...values, [e.target.name]: e.target.value });
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value
+    });
   };
 
   const clearForm = e => {
