@@ -24,5 +24,5 @@ export const useForm = () => {
   };
 
   // return value should be something *kinda* like [firstName, setFirstName]
-  return [firstName, lastName, handleChanges, clearForm];
+  return [values, handleChanges, clearForm];
 }
