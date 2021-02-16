@@ -3,7 +3,7 @@ import { useLocalStorage } from "./useLocalStorage";
 // this custom hook provides for an entire form, with some bonus functions that are helpful for forms :)
 
 export const useForm = (initialValues) => {
-  const [values, setValues] = useLocalStorage(initialValues);
+  const [values, setValues] = useLocalStorage("formValues", initialValues);
 
   const handleChanges = e => {
     console.log("change event", e.target);
