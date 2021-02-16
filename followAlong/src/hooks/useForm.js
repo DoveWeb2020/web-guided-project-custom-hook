@@ -1,6 +1,6 @@
 import { useState } from "react";
 // The utility that useState provides for a single state variable,
-// this custom hook provides for an entire form, with some bonus functions :)
+// this custom hook provides for an entire form, with some bonus functions that are helpful for forms :)
 
 export const useForm = (initialValues) => {
   const [values, setValues] = useState(initialValues);
