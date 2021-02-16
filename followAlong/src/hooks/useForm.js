@@ -1,7 +1,10 @@
 import { useState } from "react";
+// The utility that useState provides for a single state variable,
+// this custom hook provides for an entire form, with some bonus functions :)
 
 export const useForm = () => {
   const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
 
   const handleChanges = e => {
     setFirstName(e.target.value);
