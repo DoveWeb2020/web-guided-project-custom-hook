@@ -11,7 +11,8 @@ export const useForm = () => {
   const [values, setValues] = useState();
 
   const handleChanges = e => {
-    setValues([e.target.name]: e.target.value);
+    console.log("change event", e.target);
+    setValues({ ...values, [e.target.name]: e.target.value });
   };
 
   const clearForm = e => {
