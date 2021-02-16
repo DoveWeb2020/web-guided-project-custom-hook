@@ -15,7 +15,7 @@ export const useForm = (initialValues) => {
 
   const clearForm = e => {
     e.preventDefault();
-    setFirstName("");
+    setValues(initialValues);
   };
 
   // return value should be something *kinda* like [firstName, setFirstName]
