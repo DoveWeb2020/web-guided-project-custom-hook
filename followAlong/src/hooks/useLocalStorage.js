@@ -18,14 +18,11 @@ export const useLocalStorage = (key, initialValue) => {
     }
   });
 
-    // When setValue is called, in addition to the normal useState behavior, also persist the new value to localStorage.
+  // When setValue is called, in addition to the normal useState behavior, also persist the new value to localStorage.
   const setValue = (newValue) => {
     setStateValue(newValue);
-
+    localStorage.setItem(key, JSON.stringify(newValue));
   }
-
-
-
 
   return [value, setValue];
 }
